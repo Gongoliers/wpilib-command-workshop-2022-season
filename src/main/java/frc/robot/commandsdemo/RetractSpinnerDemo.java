@@ -1,17 +1,17 @@
-package frc.robot.commands;
+package frc.robot.commandsdemo;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.Robot;
 
-public class ExtendSpinner extends CommandBase {
+public class RetractSpinnerDemo extends CommandBase {
 
-    public ExtendSpinner(){
+    public RetractSpinnerDemo(){
         addRequirements(Robot.manipulator);
     }
 
     @Override
     public void initialize() {
-        Robot.manipulator.extend();
+        Robot.manipulator.retract();
     }
 
     @Override
@@ -24,6 +24,6 @@ public class ExtendSpinner extends CommandBase {
 
     @Override
     public boolean isFinished() {
-        return Robot.manipulator.isFullyExtended();
+        return Robot.manipulator.isFullyRetracted();
     }
 } 

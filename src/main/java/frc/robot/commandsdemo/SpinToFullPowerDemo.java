@@ -1,29 +1,30 @@
-package frc.robot.commands;
+package frc.robot.commandsdemo;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.Robot;
 
-public class RetractSpinner extends CommandBase {
+public class SpinToFullPowerDemo extends CommandBase {
 
-    public RetractSpinner(){
+    public SpinToFullPowerDemo(){
         addRequirements(Robot.manipulator);
     }
 
     @Override
     public void initialize() {
-        Robot.manipulator.retract();
     }
 
     @Override
     public void execute() {
+        Robot.manipulator.spin(1.0);
     }
 
     @Override
     public void end(boolean interrupted) {
+        Robot.manipulator.spin(0.0);
     }
 
     @Override
     public boolean isFinished() {
-        return Robot.manipulator.isFullyRetracted();
+        return Robot.powerSensor.getPower() >= 1.0;
     }
-} 
+}

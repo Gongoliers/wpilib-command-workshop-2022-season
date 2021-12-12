@@ -14,11 +14,11 @@ public class Drivetrain extends SubsystemBase {
 
   }
 
-  @Override
-  public void periodic() {
-  }
-
-
+  /**
+   * Drive the robot
+   * @param forward Forward is positive, backward is negative
+   * @param turn Left is negative, right is positive
+   */
   public void drive(double forward, double turn){}
 
 }

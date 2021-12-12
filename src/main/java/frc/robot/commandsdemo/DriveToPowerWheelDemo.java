@@ -1,11 +1,11 @@
-package frc.robot.commands;
+package frc.robot.commandsdemo;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.Robot;
 
-public class DriveToPowerWheel extends CommandBase {
+public class DriveToPowerWheelDemo extends CommandBase {
 
-    public DriveToPowerWheel(){
+    public DriveToPowerWheelDemo(){
         addRequirements(Robot.drivetrain);
     }
 
